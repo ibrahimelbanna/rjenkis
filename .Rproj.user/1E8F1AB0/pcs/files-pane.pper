@@ -1,0 +1,9 @@
+{
+    "path" : "~/projects/jenkins",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
