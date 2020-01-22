@@ -2,7 +2,8 @@ pipeline {
 
         agent {
 
-        label any
+        label 'master'
+
            }
 
 	options {
@@ -46,7 +47,7 @@ pipeline {
 
 	    always {
 
-		archiveArtifacts  artifacts: 'BUILD_NUMBER*.tar.gz' , fingerprint: true
+		archiveArtifacts  artifacts: '${BUILD_NUMBER}.tar.gz' , fingerprint: true
 
             }
 
