@@ -13,16 +13,6 @@
 Manage jobs and builds on your Jenkins CI server <https://jenkins.io/>. 
 Create and edit projects, trigger builds, manage build queues, download build
 logs, and much more.
-
-## How to use
-
-Generate create a new PAT in your Jenkins server:
-
-![screenshot](https://user-images.githubusercontent.com/216319/58768185-60142680-8597-11e9-9e5d-1c05798f59ec.png)
-
-Add this in your `~/.Renviron` file like this:
-
-```
 JENKINS_PAT=3858f62230ac3c915f300c664312c63f
 ```
 
