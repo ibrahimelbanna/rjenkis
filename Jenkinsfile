@@ -18,7 +18,11 @@ pipeline {
           }
 
         stages {
-
+        stage('Set Env Variables') {
+            steps {
+                setEnvVariables()
+              }
+         }
         stage('Unit Tests'){
             steps {
                 echo 'hello world'
