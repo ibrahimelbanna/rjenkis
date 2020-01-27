@@ -59,7 +59,6 @@ pipeline {
 
 	    always {
     echo 'Build Number'
-    echo '$BUILD_NUMBER'
     echo '${env.BUILD_NUMBER}'
 		archiveArtifacts  artifacts: '*.tar.gz' , fingerprint: true
 
@@ -82,5 +81,5 @@ def stagesMap() {
 }
 
 def setEnvVariables() {
-  env.CURRENT_ENV = stagesMap().get(BRANCH_NAME)
+  env.CURRENT_ENV = stagesMap().get(env.BRANCH_NAME)
 }
