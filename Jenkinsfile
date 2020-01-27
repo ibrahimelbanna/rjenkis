@@ -22,6 +22,7 @@ pipeline {
             steps {
                 setEnvVariables()
                 echo "${env.CURRENT_ENV}"
+                echo "${env.GIT_BRANCH}"
               }
             
          }
