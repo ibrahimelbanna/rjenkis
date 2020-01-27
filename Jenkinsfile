@@ -75,5 +75,15 @@ pipeline {
         }   
   }
 
+def stagesMap() {
+  return [
+    'develop': 'dev',
+    'test': 'test',
+    'stage': 'stage',
+    'master': 'prod'
+  ]
+}
 
-
+def setEnvVariables() {
+  env.CURRENT_ENV = stagesMap().get(BRANCH_NAME)
+}
