@@ -23,6 +23,7 @@ pipeline {
                 setEnvVariables()
                 echo "${env.CURRENT_ENV}"
                 echo "${env.GIT_BRANCH}"
+                echo "${env.BRANCH_NAME}"
               }
             
          }
