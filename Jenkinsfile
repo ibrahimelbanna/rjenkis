@@ -26,6 +26,7 @@ pipeline {
         stage('Unit Tests'){
             steps {
                 echo 'hello world'
+                sh "printenv"
                 echo "${env.BUILD_ID}"
                 echo "${env.BUILD_ID}"
               }
