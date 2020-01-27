@@ -24,7 +24,6 @@ pipeline {
                 setEnvVariables()
                 echo "${env.CURRENT_ENV}"
                 echo "${env.GIT_BRANCH}"
-                echo "${env.BRANCH_NAME}"
               }
             
          }
@@ -87,7 +86,6 @@ def stagesMap() {
 }
 
 def setEnvVariables() {
-  echo  BRANCH_NAME
-  echo  BRANCH_NAME
-  env.CURRENT_ENV = stagesMap().get(BRANCH_NAME)
+  env.CURRENT_ENV = stagesMap().get(env.GIT_BRANCH.toString().split("/")[1])
+  echo '${env.CURRENT_ENV}'
 }
