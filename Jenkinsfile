@@ -21,8 +21,9 @@ pipeline {
         stage('Set Env Variables') {
             steps {
                 setEnvVariables()
+                echo "${env.CURRENT_ENV}"
               }
-            echo "${env.CURRENT_ENV}"
+            
          }
         stage('Unit Tests'){
             steps {
