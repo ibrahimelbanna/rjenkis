@@ -22,8 +22,10 @@ pipeline {
         stage('Unit Tests'){
             steps {
                 echo 'hello world'
-                echo "env.BUILD_NUMBER"
+                echo "${env.BUILD_ID}"
+                echo "${env.BUILD_NUMBER}"
               }
+
          }
         stage('build'){
 
