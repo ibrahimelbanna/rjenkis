@@ -87,5 +87,7 @@ def stagesMap() {
 }
 
 def setEnvVariables() {
-  env.CURRENT_ENV = stagesMap().get(env.GIT_BRANCH)
+  echo '${GIT_BRANCH}'
+  echo '${GIT_BRANCH}'
+  env.CURRENT_ENV = stagesMap().get(GIT_BRANCH)
 }
