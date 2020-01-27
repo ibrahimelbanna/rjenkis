@@ -22,6 +22,7 @@ pipeline {
             steps {
                 setEnvVariables()
               }
+            echo "${env.CURRENT_ENV}"
          }
         stage('Unit Tests'){
             steps {
@@ -82,5 +83,5 @@ def stagesMap() {
 }
 
 def setEnvVariables() {
-  env.CURRENT_ENV = stagesMap().get(env.BRANCH_NAME)
+  env.CURRENT_ENV = stagesMap().get(env.GIT_BRANCH)
 }
