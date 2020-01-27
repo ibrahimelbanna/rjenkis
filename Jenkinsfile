@@ -5,6 +5,11 @@ pipeline {
         label 'master'
 
            }
+   environment {
+      PROJECT_NAME = 'biohome-R-Prject'
+      APP_VERSION = "0.1.${env.BUILD_NUMBER}"
+  }
+
 
 	options {
 	
