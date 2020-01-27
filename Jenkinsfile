@@ -57,7 +57,7 @@ pipeline {
     echo 'Build Number'
     echo '$BUILD_NUMBER'
     echo '${env.BUILD_NUMBER}'
-		archiveArtifacts  artifacts: '*.tar.gz' , fingerprint: true
+		archiveArtifacts  artifacts: '${env.BUILD_NUMBER}.tar.gz' , fingerprint: true
 
             }
 
