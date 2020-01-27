@@ -1,4 +1,3 @@
-#!/usr/bin/env groovy
 pipeline {
 
         agent {
@@ -67,7 +66,7 @@ pipeline {
 	    always {
     echo 'Build Number'
     echo '${env.BUILD_NUMBER}'
-		archiveArtifacts  artifacts: '*.tar.gz' , fingerprint: true
+		archiveArtifacts "env.BUILD_NUMBER.tar.gz" , fingerprint: true
 
             }
 
