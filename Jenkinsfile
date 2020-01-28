@@ -69,8 +69,7 @@ pipeline {
                 archiveArtifacts "${env.BUILD_ID}.rpt"
             }
         }      
-
-         
+      }
 	post {
 
 	    always {
@@ -78,7 +77,8 @@ pipeline {
 
         }
         }   
-  }
+  
+}
 
 def stagesMap() {
   return [
