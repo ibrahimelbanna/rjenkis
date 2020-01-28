@@ -64,7 +64,7 @@ pipeline {
 	post {
 
 	    always {
-		      archiveArtifacts "${env.BUILD_NUMBER}.tar.gz"
+		      archiveArtifacts artifacts: "${env.BUILD_NUMBER}.tar.gz"
         }
         }   
   }
