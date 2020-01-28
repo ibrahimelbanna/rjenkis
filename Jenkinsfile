@@ -64,16 +64,8 @@ pipeline {
 	post {
 
 	    always {
-    echo 'Build Number'
-    echo '${env.BUILD_NUMBER}'
-		archiveArtifacts: "${env.BUILD_NUMBER}.tar.gz" , fingerprint: true
-
-            }
-
-
-
-
-
+		      archiveArtifacts "${env.BUILD_NUMBER}.tar.gz"
+        }
         }   
   }
 
